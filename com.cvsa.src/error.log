@@ -1,0 +1,69 @@
+2025-05-17 11:43:49,257 - ERROR - Es ist ein technischer Fehler aufgetreten:
+Traceback (most recent call last):
+  File "C:\dev\stueckler\com.cvsa.src\main.py", line 92, in __init__
+    self.update_button.clicked.connect(self.update_config)
+                                       ^^^^^^^^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute 'update_config'
+2025-05-17 11:58:23,547 - ERROR - Es ist ein technischer Fehler aufgetreten:
+Traceback (most recent call last):
+  File "C:\dev\stueckler\com.cvsa.src\main.py", line 60, in __init__
+    payout_config = load_or_create_config()
+  File "C:\dev\stueckler\com.cvsa.src\config.py", line 52, in load_or_create_config
+    raw_config = yaml.safe_load(f)
+  File "C:\dev\stueckler\.venv\Lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "C:\dev\stueckler\.venv\Lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\dev\stueckler\.venv\Lib\site-packages\yaml\constructor.py", line 51, in get_single_data
+    return self.construct_document(node)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\dev\stueckler\.venv\Lib\site-packages\yaml\constructor.py", line 60, in construct_document
+    for dummy in generator:
+                 ^^^^^^^^^
+  File "C:\dev\stueckler\.venv\Lib\site-packages\yaml\constructor.py", line 413, in construct_yaml_map
+    value = self.construct_mapping(node)
+  File "C:\dev\stueckler\.venv\Lib\site-packages\yaml\constructor.py", line 218, in construct_mapping
+    return super().construct_mapping(node, deep=deep)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\dev\stueckler\.venv\Lib\site-packages\yaml\constructor.py", line 143, in construct_mapping
+    value = self.construct_object(value_node, deep=deep)
+  File "C:\dev\stueckler\.venv\Lib\site-packages\yaml\constructor.py", line 100, in construct_object
+    data = constructor(self, node)
+  File "C:\dev\stueckler\.venv\Lib\site-packages\yaml\constructor.py", line 427, in construct_undefined
+    raise ConstructorError(None, None,
+            "could not determine a constructor for the tag %r" % node.tag,
+            node.start_mark)
+yaml.constructor.ConstructorError: could not determine a constructor for the tag 'tag:yaml.org,2002:python/object/apply:decimal.Decimal'
+  in "C:\Users\andre\.cvsaGenerator\config.yaml", line 1, column 17
+2025-05-17 12:35:16,981 - ERROR - Es ist ein technischer Fehler aufgetreten:
+Traceback (most recent call last):
+  File "C:\dev\stueckler\com.cvsa.src\main.py", line 312, in read_excel_file
+    self.mass_denominations = genDenomination(payout_files,self.stueckelung,0,0,0,0,0,0)
+                              ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\dev\stueckler\com.cvsa.src\denomination.py", line 130, in genDenomination
+    denomination = get_mass_denomination(mass_payout)
+  File "C:\dev\stueckler\com.cvsa.src\denomination.py", line 64, in get_mass_denomination
+    musician_denominations = [Denomination.from_amount(p.payout_total) for p in mass_payout.musician_payouts]
+                              ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\dev\stueckler\com.cvsa.src\denomination.py", line 53, in from_amount
+    raise ValueError(f"Amount {amount}€ cannot be split (rest: {missing_amount}€)")
+ValueError: Amount 44€ cannot be split (rest: 4€)
+2025-05-17 12:48:25,447 - ERROR - Es ist ein technischer Fehler aufgetreten:
+Traceback (most recent call last):
+  File "C:\dev\stueckler\com.cvsa.src\main.py", line 88, in __init__
+    value = getattr(self.config, field)
+                    ^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute 'config'
+2025-05-17 13:01:28,624 - ERROR - Es ist ein technischer Fehler aufgetreten:
+Traceback (most recent call last):
+  File "C:\dev\stueckler\com.cvsa.src\main.py", line 331, in read_excel_file
+    payout_file = process_orchestration_file(instruments_filepath, self.updated_config)
+                                                                   ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute 'updated_config'. Did you mean: 'update_config'?
+2025-05-17 13:01:37,801 - ERROR - Es ist ein technischer Fehler aufgetreten:
+Traceback (most recent call last):
+  File "C:\dev\stueckler\com.cvsa.src\main.py", line 331, in read_excel_file
+    payout_file = process_orchestration_file(instruments_filepath, self.updated_config)
+                                                                   ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute 'updated_config'. Did you mean: 'update_config'?

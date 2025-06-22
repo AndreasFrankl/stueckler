@@ -1,0 +1,22 @@
+default_payout: 55
+addition_konzertmeister: 10
+addition_barock: 10
+
+payout_rehearsal_sunday:
+  "08:30:00": 40
+  "08:45:00": 30
+  "09:00:00": 25
+  "09:15:00": 20
+  "09:30:00": 20
+  "10:15:00": 0
+  "10:30:00": 0
+
+soloist_payout_rehearsal: 0
+soloist_payout_mass: 110
+
+substitute_payout_rehearsal: 20
+substitute_payout_mass: 35
+substitute_professional_payout_mass: 50
+
+conductor_payout_mass: 380
+conductor_payout_per_rehearsal: 120
